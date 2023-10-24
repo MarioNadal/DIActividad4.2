@@ -3,8 +3,12 @@ import InputTodo from './InputTodo';
 import ListTodo from './ListTodo';
 
 const Todo = () => {
+    const [todos, addTodos] = useState([
+        {id:1,nombre:"Todo1",isComplete:false},
+        {id:2,nombre:"Todo2",isComplete:false},
+        {id:3,nombre:"Todo3",isComplete:false}
+    ]);
 
-    const [todos, addTodos] = useState([{id:1,nombre:"Todo1",isCompleted:"False"},{id:2,nombre:"Todo2",isCompleted:"False"}]);
     const [value, setValue] = useState("");
 
     function saveValue(event) {
