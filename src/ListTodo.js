@@ -13,15 +13,18 @@ const ListTodo = ({Todos, setTodos}) => {
               Eliminar</button>
               <button onClick={() => {
                 let id = Todos.indexOf(todo)
-                const completado = Todos.map((todo)=>{
-                  if(todo.id === id){
+                const updateTodos = Todos.map((todo)=>{
+                  if(todo.id === id+1){
                     return{...todo, isComplete:true};
                   }
                   return todo;
                 })
-                setTodos(completado)
+                setTodos(updateTodos)
+                console.log(todo.isComplete)
               }}>
-              Actualizar </button>
+              Actualizar</button>
+              
+              {todo.isComplete ? <span>Hecho</span> : <span>Pendiente</span> }
           </li>
       )}
         </ul>

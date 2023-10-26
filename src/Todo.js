@@ -16,7 +16,7 @@ const Todo = () => {
     }
 
     function addList(){
-        addTodos([...todos, value])
+        addTodos([...todos, {id:todos.length+1,nombre:value,isComplete:false}])
     }
 
     return (
