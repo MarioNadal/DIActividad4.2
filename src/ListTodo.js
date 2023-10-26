@@ -24,7 +24,7 @@ const ListTodo = ({Todos, setTodos}) => {
               }}>
               Actualizar</button>
               
-              {todo.isComplete ? <span>Hecho</span> : <span>Pendiente</span> }
+              {todo.isComplete ? <span style={{backgroundColor: 'green'}}>Hecho</span> : <span style={{backgroundColor: 'red'}}>Pendiente</span> }
           </li>
       )}
         </ul>
